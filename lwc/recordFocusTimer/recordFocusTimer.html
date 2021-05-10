@@ -1,0 +1,15 @@
+<template>
+    <div style="background: white;padding: 20px;border-radius: 6px;">
+        Minutes Spent
+
+        <div style="font-size: 20px;text-align:center;">{timeVal}</div>
+        <div class="slds-align_absolute-center slds-size-1-of-1 slds-grid slds-wrap">
+            <template if:true={showStartBtn}>
+                <lightning-button label="Start" onclick={start} class="slds-p-around_medium"></lightning-button>
+            </template>
+            <template if:false={showStartBtn}>
+                <lightning-button label="Stop" onclick={stop} class="slds-p-around_medium"></lightning-button>
+            </template>
+        </div>
+    </div>
+</template>
