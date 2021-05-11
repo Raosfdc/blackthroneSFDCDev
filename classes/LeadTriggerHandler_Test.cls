@@ -18,7 +18,7 @@ public class LeadTriggerHandler_Test {
     @IsTest
     private static void testDuplicateLeads() {
         List<Lead> lstLeads = [SELECT Id, Name, Email FROM Lead];
-        lstLeads[0].Email = 'testLead5@test.com';
+        lstLeads[0].Email = 'testlead5@test.com';
         
         try{
             update lstLeads[0];

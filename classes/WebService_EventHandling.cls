@@ -20,10 +20,10 @@ global class WebService_EventHandling {
     global static String registerAttendeeeForEvent(String strEventId, String strFirstName, String strLastName, String strEmail, String strPhone) {
         try{
             // Create a new Contact Record
-            Contact objCon = new Contact(FirstName = strFirstName,
+            Contact objCon = new Contact(FirstName = strFirstName != null ? strFirstName : null,
                                          LastName = strLastName,
-                                         Email = strEmail,
-                                         Phone = strPhone);
+                                         Email = strEmail != null ? strEmail : null,
+                                         Phone = strPhone != null ? strPhone : null);
             insert objCon;
             
             // Get the Event record

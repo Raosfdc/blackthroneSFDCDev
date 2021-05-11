@@ -19,7 +19,7 @@ public class EventTriggerHandler {
                                               CreatedById =: UserInfo.GetUserId()];
             
             for(Event ev : newList) {
-                if (thisMonthEventList.Size()>=intmaxEvents){
+                if (intmaxEvents != 0 && thisMonthEventList.Size()>=intmaxEvents){
                     Trigger.New[0].addError('Too many events created this month for user '+Usr.Name+' : '+intmaxEvents);
                 }
             }
